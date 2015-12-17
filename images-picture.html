@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Sample illustrating the use of the picture element.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>&lt;picture&gt; Element Sample</title>
+
+    <style type="text/css">
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h1 {
+      top: 20px;
+      left: 20px;
+    }
+
+    picture {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 11px;
+      color: #777;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    figcaption pre {
+      display: inline-block;
+      background: rgba(20, 20, 20, 0.5);
+      padding: 3px 5px;
+      font-family: Courier, serif;
+    }
+    </style>
+
+  <body>
+    <h1>&lt;picture&gt; Element Sample</h1>
+
+    <section>
+
+      <picture>
+        <source media="(min-width: 2500px)" srcset="2500.png">
+        <source media="(min-width: 1500px)" srcset="1500.png">
+        <source media="(min-width: 1000px)" srcset="1000.png">
+        <source media="(min-width: 750px)" srcset="750.png">
+        <source media="(min-width: 500px)" srcset="500.png">
+        <source media="(min-width: 300px)" srcset="300.png">
+        <source media="(min-width: 100px)" srcset="100.png">
+        <!-- img tag for browsers that do not support picture element -->
+        <img alt="sample images" onload="console.log(event.currentTarget.currentSrc)">
+      </picture>
+
+    </section>
+  </body>
+</html>
